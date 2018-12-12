@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the FraisPage page.
+ * Generated class for the NouveauFraisPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-frais',
-  templateUrl: 'frais.html',
+  selector: 'page-nouveau-frais',
+  templateUrl: 'nouveau-frais.html',
 })
-export class FraisPage {
+export class NouveauFraisPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FraisPage');
+    console.log('ionViewDidLoad NouveauFraisPage');
   }
 
 }

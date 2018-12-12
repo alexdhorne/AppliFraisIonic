@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the AjoutFraisNonForfaitisePage page.
+ * Generated class for the FraisVisiteurPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-ajout-frais-non-forfaitise',
-  templateUrl: 'ajout-frais-non-forfaitise.html',
+  selector: 'page-frais-visiteur',
+  templateUrl: 'frais-visiteur.html',
 })
-export class AjoutFraisNonForfaitisePage {
+export class FraisVisiteurPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad AjoutFraisNonForfaitisePage');
+    console.log('ionViewDidLoad FraisVisiteurPage');
   }
 
 }
