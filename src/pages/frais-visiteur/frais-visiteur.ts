@@ -22,4 +22,7 @@ export class FraisVisiteurPage {
     console.log('ionViewDidLoad FraisVisiteurPage');
   }
 
+  goToDetail() {
+    this.navCtrl.push('FraisForfaitiseNonForfaitisePage');
+  }
 }
