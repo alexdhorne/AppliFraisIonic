@@ -7,12 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>frais_forfaitise_non_forfaitise</ion-title>
+    <ion-title>Détails</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
+
 <ion-content padding>
+
+    <ion-card (tap)="tapEvent($event)">
+        <ion-item>
+          Nuitée hotel : 70€
+        </ion-item>
+      </ion-card>
+
+      <ion-card (tap)="tapEvent($event)">
+          <ion-item>
+            Frais kilometrique : 140€
+          </ion-item>
+        </ion-card>
+  
 
 </ion-content>
