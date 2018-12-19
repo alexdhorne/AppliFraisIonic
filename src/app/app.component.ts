@@ -42,7 +42,7 @@ export class MyApp {
     { title: 'Master Detail', component: 'ListMasterPage' },
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
-    { title: 'FicheFrais', component: 'FraisVisiteurPage'}
+    { title: 'FicheFrais', component: 'FraisVisiteurPage'},
     { title: 'Search', component: 'SearchPage' },
     { title: 'Détail', component: 'FraisForfaitiseNonForfaitisePage' }
 

@@ -16,15 +16,36 @@
 
 <ion-content padding>
 
-    <ion-card (tap)="tapEvent($event)">
-        <ion-item>
-          Nuitée hotel : 70€
-        </ion-item>
+    <ion-card>
+
+        <ion-card-title>
+          Frais forfaitisé
+        </ion-card-title>
+      <hr>
+        <ion-card-content>
+          <div class="card-text">
+            Frais kilometrique : 140€
+          </div>
+          <hr>
+          <div class="card-text>">
+            Nuitée hôtel : 200€
+          </div>
+          </ion-card-content>
+      
       </ion-card>
 
-      <ion-card (tap)="tapEvent($event)">
+      <ion-card>
+
+          <ion-card-title>
+            Frais non-forfaitisé
+          </ion-card-title>
+        
+          <ion-card-content>
+          </ion-card-content>
+        
+        </ion-card><ion-card (tap)="tapEvent($event)">
           <ion-item>
-            Frais kilometrique : 140€
+              
           </ion-item>
         </ion-card>
   

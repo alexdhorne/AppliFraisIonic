@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FichefraisProvider } from '../../providers/fichefrais/fichefrais';
+import { FicheFrais } from '../../models/FicheFrais';
 
 /**
  * Generated class for the FraisVisiteurPage page.
@@ -15,12 +17,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class FraisVisiteurPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+ficheFrais: Array<FicheFrais>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider) {
+  
+  ficheFraisProvider.getAll().subscribe((datas) => {
+    this.ficheFrais = Object.keys(datas).map(i => datas[i]);
+  debugger;
+  });
+}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad FraisVisiteurPage');
   }
+
 
   goToDetail() {
     this.navCtrl.push('FraisForfaitiseNonForfaitisePage');
