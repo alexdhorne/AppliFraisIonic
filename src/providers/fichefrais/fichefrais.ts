@@ -15,7 +15,7 @@ export class FichefraisProvider {
     
   }
   getAll(){
-    return this.http.get('http://localhost/gsbMVC%20stable/gsbMVC/fiche_frais.php');
+    return this.http.get('http://localhost/AppliFrais/mobileData/fiche_frais.php');
   }
 
 }
