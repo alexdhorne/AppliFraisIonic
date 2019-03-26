@@ -17,16 +17,18 @@
 
   <ion-card round >
 
-    <ion-card-content>
-      <div class="card-title">Decembre 2018</div>
-      <div class="card-text">450 €</div>
+    <ion-card-content padding>
+      <ion-card *ngFor = "let fiche of ficheFrais">
+      <div class="card-title">{{fiche.mois}} {{fiche.annee}}</div>
+      <div class="card-text">{{fiche.montant}}</div>
       <br />
       <button ion-button outline round color="secondary">Valider</button>
       <button ion-button outline round (click)="goToDetail()">Détails</button>
+    </ion-card>
     </ion-card-content>
 
   </ion-card>
-  <ion-card>
+  <!-- <ion-card>
 
     <ion-card-content>
       <div class="card-title">Novembre 2018</div>
@@ -60,4 +62,4 @@
 
   </ion-card>
 
-</ion-content>
+</ion-content> -->

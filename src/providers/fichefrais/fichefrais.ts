@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 
 /*
   Generated class for the FichefraisProvider provider.
@@ -11,9 +12,10 @@ import { Injectable } from '@angular/core';
 export class FichefraisProvider {
 
   constructor(public http: HttpClient) {
-    console.log('Hello FichefraisProvider Provider');
+    
   }
-getAll(){
-  return this.http.get('http://localhost/TEST/test.php');
-}
+  getAll(){
+    return this.http.get('http://localhost/gsbMVC%20stable/gsbMVC/fiche_frais.php');
+  }
+
 }
