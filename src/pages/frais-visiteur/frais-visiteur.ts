@@ -72,7 +72,7 @@ ficheFrais: Array<FicheFrais>;
   }
 
 
-  goToDetail() {
-    this.navCtrl.push('FraisForfaitiseNonForfaitisePage');
+  goToDetail(fiche) {
+    this.navCtrl.push('FraisForfaitiseNonForfaitisePage', { fiche: fiche } );
   }
 }
