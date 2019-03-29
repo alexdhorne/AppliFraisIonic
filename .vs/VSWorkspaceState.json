@@ -1,11 +1,10 @@
 {
   "ExpandedNodes": [
-    "",
     "\\src",
+    "\\src\\pages",
     "\\src\\pages\\frais-forfaitise-non-forfaitise",
     "\\src\\providers",
     "\\src\\providers\\fichefrais"
   ],
-  "SelectedNode": "\\src\\providers\\fichefrais\\fichefrais.ts",
   "PreviewInSolutionExplorer": false
 }
