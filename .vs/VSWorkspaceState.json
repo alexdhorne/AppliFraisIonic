@@ -1,14 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src",
-    "\\src\\app",
-    "\\src\\pages",
-    "\\src\\pages\\login",
-    "\\src\\pages\\register",
-    "\\src\\providers",
-    "\\src\\providers\\fichefrais"
+    "\\AppliMobile",
+    "\\AppliMobile\\src",
+    "\\AppliMobile\\src\\app",
+    "\\AppliMobile\\src\\pages",
+    "\\AppliMobile\\src\\pages\\login",
+    "\\AppliMobile\\src\\pages\\register",
+    "\\AppliMobile\\src\\providers",
+    "\\serveurAPI"
   ],
-  "SelectedNode": "\\src\\pages\\register\\register.html",
+  "SelectedNode": "\\AppliMobile\\src\\pages\\login\\login.html",
   "PreviewInSolutionExplorer": false
 }
