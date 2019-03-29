@@ -19,8 +19,8 @@
 
     <ion-card-content padding>
       <ion-card *ngFor = "let fiche of ficheFrais">
-      <div class="card-title">{{fiche.mois}} {{fiche.annee}}</div>
-      <div class="card-text">{{fiche.montant}}</div>
+      <div class="card-title">{{fiche.mois}}</div>
+      <div class="card-text">{{fiche.montantValide}}</div>
       <br />
       <button ion-button outline round color="secondary">Valider</button>
       <button ion-button outline round (click)="goToDetail(fiche)">Détails</button>

@@ -1,10 +1,21 @@
 {
   "ExpandedNodes": [
     "\\src",
+
     "\\src\\pages",
     "\\src\\pages\\frais-forfaitise-non-forfaitise",
     "\\src\\providers",
     "\\src\\providers\\fichefrais"
   ],
+
+    "\\src\\app",
+    "\\src\\pages",
+    "\\src\\pages\\login",
+    "\\src\\pages\\register",
+    "\\src\\providers",
+    "\\src\\providers\\fichefrais"
+  
+  "SelectedNode": "\\src\\pages\\register\\register.html",
+
   "PreviewInSolutionExplorer": false
 }
