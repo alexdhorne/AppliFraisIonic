@@ -27,7 +27,7 @@ export class LoginPage {
       let body = {
         login: this.login,
         mdp: this.mdp,
-        aksi: 'login'
+        aksi: 'connexion'
       };
 
       this.postPvdr.postData(body, 'file_aksi.php').subscribe((data) => {
@@ -40,16 +40,23 @@ export class LoginPage {
             duration: 2000
           });
           toast.present();
+          console.log(data);
         } else {
           const toast = this.toastCtrl.create({
-            message: 'Identifiant ou mot de passe incorrect.',
+            message: alertpesan,
             duration: 2000
           });
           toast.present();
-        }
 
+        }
       });
 
+    } else {
+      const toast = this.toastCtrl.create({
+        message: 'Identifiant ou mot de passe introuvable',
+        duration: 2000
+      });
+      toast.present();
     }
   }
 

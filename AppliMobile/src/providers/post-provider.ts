@@ -18,7 +18,11 @@ export class PostProvider {
     let options = new RequestOptions({ headers: headers });
 
     return this.http.post(this.server + file, JSON.stringify(body), options)
-    .map(res => res.json());
+      .map(res => res.json());
+      //.map(res => res.text())
+      //.map(text => console.log(text));
+
+
 
   }
 }
