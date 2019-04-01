@@ -34,7 +34,7 @@ export class LoginPage {
         var alertpesan = data.msg;
         if (data.success) {
           this.storage.set('session_storage', data.result);
-          this.navCtrl.setRoot(FraisVisiteurPage);
+          this.navCtrl.setRoot(RegisterPage);
           const toast = this.toastCtrl.create({
             message: 'Connexion réussie.',
             duration: 2000

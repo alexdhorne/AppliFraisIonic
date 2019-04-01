@@ -65,7 +65,7 @@ export class MyApp {
       if (res == null) {
         this.rootPage = LoginPage;
       } else {
-        this.rootPage = RegisterPage;
+       this.rootPage = RegisterPage;
       }
     });
   }

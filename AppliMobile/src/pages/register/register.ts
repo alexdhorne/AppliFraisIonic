@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController, DateTime } from 'ionic-angular';
 import { PostProvider } from '../../providers/post-provider';
+import { LoginPage } from '../login/login';
 
 
 
@@ -121,6 +122,12 @@ export class RegisterPage {
 
       });
     }
+  }
+
+
+
+  Retour() {
+    this.navCtrl.push(LoginPage);
   }
 
 }

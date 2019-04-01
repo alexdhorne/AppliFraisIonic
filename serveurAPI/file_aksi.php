@@ -8,8 +8,10 @@ header("Content-Type: application/json; charset=utf-8");
 
 include "config.php";
 $postjson = json_decode(file_get_contents('php://input'), true);
+
+
 if($postjson['aksi']=="ajoutUtilisateur"){
-	$mdp = md5($postjson['mdp']);
+	//$mdp = md5($postjson['mdp']);
 	$query = mysqli_query($mysqli, "INSERT INTO visiteur SET 
 	login = '$postjson[login]',
 	mdp = '$postjson[mdp]',
