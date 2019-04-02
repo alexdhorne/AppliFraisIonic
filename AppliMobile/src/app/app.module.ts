@@ -12,8 +12,10 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Items } from '../mocks/providers/items';
 import { Settings, User, Api } from '../providers';
 import { MyApp } from './app.component';
+import { VisiteurProvider } from '../providers/visiteur/visiteur';
 import { FichefraisProvider } from '../providers/fichefrais/fichefrais';
 import { LoginPage } from '../pages/login/login';
+import { FraisVisiteurPage } from '../pages/frais-visiteur/frais-visiteur';
 import { RegisterPage } from '../pages/register/register';  
 import { HttpModule } from '@angular/http';
 import { PostProvider } from '../providers/post-provider';
@@ -45,6 +47,7 @@ export function provideSettings(storage: Storage) {
   declarations: [
     MyApp,
     LoginPage,
+    FraisVisiteurPage,
     RegisterPage
   ],
   imports: [
@@ -65,7 +68,9 @@ export function provideSettings(storage: Storage) {
   entryComponents: [
     MyApp,
     LoginPage,
-    RegisterPage
+    FraisVisiteurPage,
+    RegisterPage,
+
   ],
   providers: [
     Api,
@@ -79,7 +84,7 @@ export function provideSettings(storage: Storage) {
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     FichefraisProvider,
-    FichefraisProvider
+    VisiteurProvider,
   ]
 })
 export class AppModule { }

@@ -15,6 +15,7 @@ export class LoginPage {
 
   login: string;
   mdp: string;
+  groupe: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, private postPvdr: PostProvider, private storage: Storage) {
   }
@@ -27,6 +28,7 @@ export class LoginPage {
       let body = {
         login: this.login,
         mdp: this.mdp,
+        //groupe: this.groupe,
         aksi: 'connexion'
       };
 
@@ -34,7 +36,7 @@ export class LoginPage {
         var alertpesan = data.msg;
         if (data.success) {
           this.storage.set('session_storage', data.result);
-          this.navCtrl.setRoot(RegisterPage);
+          this.navCtrl.setRoot(FraisVisiteurPage);
           const toast = this.toastCtrl.create({
             message: 'Connexion réussie.',
             duration: 2000
@@ -47,7 +49,6 @@ export class LoginPage {
             duration: 2000
           });
           toast.present();
-
         }
       });
 

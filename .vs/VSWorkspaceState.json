@@ -4,10 +4,10 @@
     "\\AppliMobile",
     "\\AppliMobile\\src",
     "\\AppliMobile\\src\\pages",
-    "\\AppliMobile\\src\\pages\\login",
+    "\\AppliMobile\\src\\pages\\frais-visiteur",
     "\\AppliMobile\\src\\pages\\register",
     "\\serveurAPI"
   ],
-  "SelectedNode": "\\AppliMobile\\src\\index.html",
+  "SelectedNode": "\\AppliMobile\\src\\pages\\register\\register.ts",
   "PreviewInSolutionExplorer": false
 }
