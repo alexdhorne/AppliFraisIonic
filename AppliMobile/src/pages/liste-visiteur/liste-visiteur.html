@@ -12,7 +12,16 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
-</ion-content>
+  <ion-card round>
+
+    <ion-card-content padding>
+      <ion-card *ngFor="let visiteur of visiteur">
+        <div class="card-title">{{visiteur.nom}}</div>
+        <div class="card-text">{{visiteur.prenom}}</div>
+
+  </ion-card>
+
+  <ion-content padding>
+  </ion-content>
