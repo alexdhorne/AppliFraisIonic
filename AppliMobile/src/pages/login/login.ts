@@ -4,6 +4,7 @@ import { PostProvider } from '../../providers/post-provider';
 import { Storage } from '@ionic/Storage';
 import { FraisVisiteurPage } from '../frais-visiteur/frais-visiteur';
 import { RegisterPage } from '../register/register';
+import { ListeVisiteurPage } from '../liste-visiteur/liste-visiteur';
 
 
 @IonicPage()
@@ -15,7 +16,7 @@ export class LoginPage {
 
   login: string;
   mdp: string;
-  groupe: string;
+  //groupe: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public toastCtrl: ToastController, private postPvdr: PostProvider, private storage: Storage) {
   }
@@ -24,7 +25,62 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
   connexion() {
-    if (this.login != "" && this.mdp != "") {
+    if (this.login == "admin" && this.mdp == "admin") {
+      let body = {
+        login: this.login,
+        mdp: this.mdp,
+        //groupe: this.groupe,
+        aksi: 'connexion'
+      };
+
+      this.postPvdr.postData(body, 'file_aksi.php').subscribe((data) => {
+        var alertpesan = data.msg;
+        if (data.success) {
+          this.storage.set('session_storage', data.result);
+          this.navCtrl.setRoot(ListeVisiteurPage);
+          const toast = this.toastCtrl.create({
+            message: 'Connexion réussie.',
+            duration: 2000
+          });
+          toast.present();
+          console.log(data);
+        } else {
+          const toast = this.toastCtrl.create({
+            message: alertpesan,
+            duration: 2000
+          });
+          toast.present();
+        }
+      });
+    }else if (this.login == "comptable" && this.mdp == "comptable") {
+        let body = {
+          login: this.login,
+          mdp: this.mdp,
+          //groupe: this.groupe,
+          aksi: 'connexion'
+        };
+
+        this.postPvdr.postData(body, 'file_aksi.php').subscribe((data) => {
+          var alertpesan = data.msg;
+          if (data.success) {
+            this.storage.set('session_storage', data.result);
+            this.navCtrl.setRoot(RegisterPage);
+            const toast = this.toastCtrl.create({
+              message: 'Connexion réussie.',
+              duration: 2000
+            });
+            toast.present();
+            console.log(data);
+          } else {
+            const toast = this.toastCtrl.create({
+              message: alertpesan,
+              duration: 2000
+            });
+            toast.present();
+          }
+        });
+
+    } else if (this.login != "" && this.mdp != "") {
       let body = {
         login: this.login,
         mdp: this.mdp,
@@ -59,6 +115,8 @@ export class LoginPage {
       });
       toast.present();
     }
+
+
   }
 
 

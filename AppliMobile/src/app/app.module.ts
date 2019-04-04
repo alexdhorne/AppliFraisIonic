@@ -16,6 +16,7 @@ import { VisiteurProvider } from '../providers/visiteur/visiteur';
 import { FichefraisProvider } from '../providers/fichefrais/fichefrais';
 import { LoginPage } from '../pages/login/login';
 import { FraisVisiteurPage } from '../pages/frais-visiteur/frais-visiteur';
+import { ListeVisiteurPage } from '../pages/liste-visiteur/liste-visiteur';
 import { RegisterPage } from '../pages/register/register';  
 import { HttpModule } from '@angular/http';
 import { PostProvider } from '../providers/post-provider';
@@ -48,7 +49,8 @@ export function provideSettings(storage: Storage) {
     MyApp,
     LoginPage,
     FraisVisiteurPage,
-    RegisterPage
+    RegisterPage,
+    ListeVisiteurPage
   ],
   imports: [
     BrowserModule,
@@ -70,6 +72,7 @@ export function provideSettings(storage: Storage) {
     LoginPage,
     FraisVisiteurPage,
     RegisterPage,
+    ListeVisiteurPage,
 
   ],
   providers: [

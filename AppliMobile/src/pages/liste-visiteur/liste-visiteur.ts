@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Visiteur } from '../../models/Visiteur';
 import { VisiteurProvider } from '../../providers/visiteur/visiteur';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the ListeVisiteurPage page.
@@ -29,6 +30,9 @@ export class ListeVisiteurPage {
       });
   }
 
+  Deconnexion() {
+    this.navCtrl.push(LoginPage);
+  }
   
 
   
