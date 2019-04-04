@@ -59,4 +59,32 @@ elseif($postjson['aksi']=="connexion"){
 	}
 
 	echo $result;
+
+	//select fichefrais.mois as mois from  fichefrais where fichefrais.idvisiteur ='$idVisiteur' order by fichefrais.mois desc
+}
+
+elseif($postjson['aksi']=="RecupFiche"){
+	//$mdp = md5($postjson['mdp']);
+	$query = mysqli_query($mysqli, "SELECT fichefrais.mois as mois FROM  fichefrais where fichefrais. = $postjson[idVisiteur] ORDER BY fichefrais.mois DESC");
+	$check = mysqli_num_rows($query);
+
+	if($check>0){
+		$data = mysqli_fetch_array($query);
+		$datauser = array(
+			'idVisiteur' => $data['idVisiteur'],
+			'mois' => $data['mois'],
+			'nbJustificatifs' => $data['nbJustificatifs'],
+			'montantValide' => $data['montantValide'],
+			'dateModif' => $data['dateModif'],
+			'idEtat' => $data['idEtat'],
+		);
+
+		if ($query) $result = json_encode(array('success'=>true, 'result'=>$datauser));
+	    else $result = json_encode(array('success'=>false, 'msg'=>'error, please try again'));
+
+	}else{
+		$result = json_encode(array('success'=>false, 'msg'=>'Compte inconnu'));
+	}
+
+	echo $result;
 }

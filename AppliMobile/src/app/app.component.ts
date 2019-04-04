@@ -36,6 +36,7 @@ export class MyApp {
 
   pages: any[] = [
     { title: 'Tutorial', component: 'TutorialPage' },
+    { title: 'Liste fiches frais', component: 'ListeFicheFraisPage' },
     { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Tabs', component: 'TabsPage' },
     { title: 'Cards', component: 'CardsPage' },
@@ -48,7 +49,9 @@ export class MyApp {
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'FicheFrais', component: 'FraisVisiteurPage'},
     { title: 'Search', component: 'SearchPage' },
-    { title: 'Détail', component: 'FraisForfaitiseNonForfaitisePage' }
+    { title: 'Détail', component: 'FraisForfaitiseNonForfaitisePage' },
+
+    
 
   ]
 

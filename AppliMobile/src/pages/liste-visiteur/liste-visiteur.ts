@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Visiteur } from '../../models/Visiteur';
 import { VisiteurProvider } from '../../providers/visiteur/visiteur';
 import { LoginPage } from '../login/login';
+import { Storage } from '@ionic/Storage';
+
 
 /**
  * Generated class for the ListeVisiteurPage page.
@@ -21,7 +23,7 @@ export class ListeVisiteurPage {
   visiteur: Array<Visiteur>;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public visiteurProvider: VisiteurProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public visiteurProvider: VisiteurProvider, private storage: Storage) {
 
     visiteurProvider.getAll().subscribe(
       (datas) => {
@@ -37,8 +39,10 @@ export class ListeVisiteurPage {
 
   
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListeVisiteurPage');
+  ionViewWillEnter() {
+    this.storage.get('session_storage').then((res) => {
+      console.log(res);
+    });
   }
 
 }
