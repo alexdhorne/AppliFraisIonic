@@ -21,6 +21,10 @@ export class FichefraisProvider {
     return this.http.get(this.url + 'fiche_frais.php');
   }
 
+  recupfiche() {
+    return this.http.get('http://localhost/AppliFraisIonic/serveurAPI/file_aksi.php');
+  }
+
   getDetailByMois(mois: string) {
     let httpParams = new HttpParams();
     httpParams = httpParams.append('mois', mois)

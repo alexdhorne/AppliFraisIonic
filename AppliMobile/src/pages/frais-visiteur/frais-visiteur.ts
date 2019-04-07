@@ -26,11 +26,11 @@ ficheFrais: Array<FicheFrais>;
   constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider, private storage: Storage) {
   
   
-  ficheFraisProvider.getAll().subscribe(
-    (datas)=>{
-      this.ficheFrais = datas as Array<FicheFrais>;
-      debugger;
-    });
+    ficheFraisProvider.getAll().subscribe(
+      (datas)=>{
+        this.ficheFrais = datas as Array<FicheFrais>;
+        debugger;
+      });
   }
 
   ionViewWillEnter() {

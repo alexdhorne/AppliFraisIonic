@@ -22,7 +22,5 @@ export class PostProvider {
       //.map(res => res.text())
       //.map(text => console.log(text));
 
-
-
   }
 }

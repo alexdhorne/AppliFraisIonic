@@ -4,6 +4,7 @@ import { Visiteur } from '../../models/Visiteur';
 import { VisiteurProvider } from '../../providers/visiteur/visiteur';
 import { LoginPage } from '../login/login';
 import { Storage } from '@ionic/Storage';
+import { RegisterPage } from '../register/register';
 
 
 /**
@@ -35,7 +36,10 @@ export class ListeVisiteurPage {
   Deconnexion() {
     this.navCtrl.push(LoginPage);
   }
-  
+
+  NavAjoutUser() {
+    this.navCtrl.push(RegisterPage)
+  }
 
   
 

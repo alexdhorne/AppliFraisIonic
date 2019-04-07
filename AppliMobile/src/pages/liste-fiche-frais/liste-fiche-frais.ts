@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PostProvider } from '../../providers/post-provider';
+import { Storage } from '@ionic/Storage';
+import { AffichageFicheFraisPage } from '../affichage-fiche-frais/affichage-fiche-frais';
+
+
 
 /**
  * Generated class for the ListeFicheFraisPage page.
@@ -34,10 +39,9 @@ export class ListeFicheFraisPage {
       };
 
       this.postPvdr.postData(body, 'file_aksi.php').subscribe((data) => {
-        var alertpesan = data.msg;
         if (data.success) {
-          this.storage.set('session_storage', data.result);
-          //this.navCtrl.setRoot(ListeVisiteurPage);
+          //this.storage.set('session_storage', data.result);
+          this.navCtrl.setRoot(AffichageFicheFraisPage);
           console.log(data);
 
 
