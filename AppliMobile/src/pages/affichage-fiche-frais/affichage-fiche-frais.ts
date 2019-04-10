@@ -23,11 +23,11 @@ export class AffichageFicheFraisPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider) {
 
-    ficheFraisProvider.recupfiche().subscribe(
-      (datas) => {
-        this.ficheFrais = datas as Array<FicheFrais>;
-        debugger;
-      });
+    //ficheFraisProvider.recupfiche().subscribe(
+    //  (datas) => {
+    //    this.ficheFrais = datas as Array<FicheFrais>;
+    //    debugger;
+    //  });
 
   }
 

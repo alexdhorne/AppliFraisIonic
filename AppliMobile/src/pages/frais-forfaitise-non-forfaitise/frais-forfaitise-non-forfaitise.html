@@ -15,7 +15,7 @@
 
 
 <ion-content padding>
-    
+  <!--*ngfor =" let detail of details"-->
   <ion-card>
     <ion-card-title>
       Frais forfaitisé
@@ -23,7 +23,6 @@
     <hr>
     <ion-card-content>
       <div class="card-text">
-        {{fiche.mois}}
       </div>
       <hr>
       <div class="card-text>">
@@ -32,21 +31,18 @@
     </ion-card-content>
 
   </ion-card>
+  <ion-card>
+    <ion-card-title>
+      Frais non-forfaitisé
+    </ion-card-title>
 
-      <ion-card>
+    <ion-card-content>
+    </ion-card-content>
 
-          <ion-card-title>
-            Frais non-forfaitisé
-          </ion-card-title>
-        
-          <ion-card-content>
-          </ion-card-content>
-        
-        </ion-card><ion-card (tap)="tapEvent($event)">
-          <ion-item>
-              
-          </ion-item>
-        </ion-card>
-  
+  </ion-card><ion-card (tap)="tapEvent($event)">
+    <ion-item>
+
+    </ion-item>
+  </ion-card>
 
 </ion-content>

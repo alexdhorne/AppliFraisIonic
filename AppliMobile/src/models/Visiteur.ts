@@ -1,5 +1,5 @@
 export class Visiteur {
-  id: number;
+  idVisiteur: number;
   nom: string;
   prenom: string;
   mdp: string;

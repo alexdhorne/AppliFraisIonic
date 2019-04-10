@@ -17,21 +17,18 @@ export class FichefraisProvider {
 
   url = 'http://localhost/AppliFrais/mobileData/';
 
-  getAll(){
-    return this.http.get(this.url + 'fiche_frais.php');
+  getById(idVisiteur) {
+
+    return this.http.get('http://localhost/AppliFrais/mobileData/fiche_frais.php?idVisiteur=' + idVisiteur);
   }
 
-  recupfiche() {
-    return this.http.get('http://localhost/AppliFraisIonic/serveurAPI/file_aksi.php');
-  }
-
-  getDetailByMois(mois: string) {
-    let httpParams = new HttpParams();
-    httpParams = httpParams.append('mois', mois)
-    let options = {
-      headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
-    };
-    return this.http.post(this.url + 'detail.php', httpParams, options);
-  }
+  //getDetailByMois(mois: string) {
+  //  let httpParams = new HttpParams();
+  //  httpParams = httpParams.append('mois', mois)
+  //  let options = {
+  //    headers: new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
+  //  };
+  //  return this.http.post(this.url + 'detail.php', httpParams, options);
+  //}
 
 }

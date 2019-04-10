@@ -5,6 +5,7 @@ import { FicheFrais } from '../../models/FicheFrais';
 import { getAllDebugNodes } from '@angular/core/src/debug/debug_node';
 import { Subscriber } from 'rxjs/Subscriber';
 import { Storage } from '@ionic/Storage';
+import { LoginPage } from '../login/login';
 
 
 /**
@@ -21,22 +22,27 @@ import { Storage } from '@ionic/Storage';
 })
 export class FraisVisiteurPage {
 
-ficheFrais: Array<FicheFrais>;
+  ficheFrais: FicheFrais[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider, private storage: Storage) {
-  
-  
-    ficheFraisProvider.getAll().subscribe(
-      (datas)=>{
-        this.ficheFrais = datas as Array<FicheFrais>;
+
+    this.storage.get('session_storage').then((datas) => {
+      ficheFraisProvider.getById(datas['id']).subscribe((d) => {
+        this.ficheFrais = d as FicheFrais[];
         debugger;
       });
+    });
+
   }
 
-  ionViewWillEnter() {
-    this.storage.get('session_storage').then((res) => {
-      console.log(res);
-    });
+  //ionViewWillEnter() {
+  //  this.storage.get('session_storage').then((res) => {
+  //    console.log(res);
+  //  });
+  //}
+
+  Retour() {
+    this.navCtrl.push(LoginPage);
   }
 
   goToDetail(fiche) {

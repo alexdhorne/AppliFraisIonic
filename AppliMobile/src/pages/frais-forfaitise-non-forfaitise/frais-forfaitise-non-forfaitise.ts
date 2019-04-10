@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FichefraisProvider } from '../../providers/fichefrais/fichefrais';
 import { FicheFrais } from '../../models/FicheFrais';
+import { Storage } from '@ionic/Storage';
 
 
 /**
@@ -22,19 +23,23 @@ export class FraisForfaitiseNonForfaitisePage {
   ficheFrais: Array<FicheFrais>;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public ficheFraisProvider: FichefraisProvider, private storage: Storage) {
 
-    let fiche = navParams.data['fiche'];
-    ficheFraisProvider.getDetailByMois(fiche.mois).subscribe(
-      (datas) => {
-        this.ficheFrais = datas as Array<FicheFrais>;
-        debugger;
-      });
+    //let fiche = navParams.data['fiche'];
+    //ficheFraisProvider.getDetailByMois(fiche.mois).subscribe(
+    //  (datas) => {
+    //    this.ficheFrais = datas as Array<FicheFrais>;
+    //    debugger;
+    //  });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FraisForfaitiseNonForfaitisePage');
+  ionViewWillEnter() {
+    this.storage.get('session_storage').then((res) => {
+      console.log(res);
+    });
   }
+
+
 
 }
 

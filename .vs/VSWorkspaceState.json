@@ -4,12 +4,13 @@
     "\\AppliMobile",
     "\\AppliMobile\\src",
     "\\AppliMobile\\src\\app",
+    "\\AppliMobile\\src\\models",
     "\\AppliMobile\\src\\pages",
     "\\AppliMobile\\src\\pages\\affichage-fiche-frais",
-    "\\AppliMobile\\src\\pages\\frais-visiteur",
-    "\\AppliMobile\\src\\pages\\register",
-    "\\serveurAPI"
+    "\\AppliMobile\\src\\pages\\frais-forfaitise-non-forfaitise",
+    "\\AppliMobile\\src\\providers",
+    "\\AppliMobile\\src\\providers\\fichefrais"
   ],
-  "SelectedNode": "\\AppliMobile\\src\\app\\app.module.ts",
+  "SelectedNode": "\\AppliMobile\\src\\models\\Visiteur.ts",
   "PreviewInSolutionExplorer": false
 }
