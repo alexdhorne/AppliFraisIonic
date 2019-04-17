@@ -15,20 +15,15 @@
 
 <ion-content padding>
 
-  <ion-card round>
-
     <ion-card-content padding>
-      <ion-card *ngFor="let fiche of ficheFrais">
+      <ion-card *ngFor="let fiche of ficheFrais" style="padding-top: 15px;padding-bottom: 15px;">
         <div class="card-title">{{fiche.mois}}</div>
-        <div class="card-text">{{fiche.etat.id}}</div>
         <br />
-        <button ion-button outline round color="secondary">{{fiche.etat.id}}</button>
+        <button ion-button outline round color="secondary" disabled>{{fiche.etat.id}}</button>
         <button ion-button outline round (click)="goToDetail(fiche)">Détails</button>
       </ion-card>
-
     </ion-card-content>
 
-  </ion-card>
   <div>
     <button ion-button color="danger" block (click)="Retour()">Déconnexion</button>
   </div>

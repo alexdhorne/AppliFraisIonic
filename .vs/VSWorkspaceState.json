@@ -7,10 +7,10 @@
     "\\AppliMobile\\src\\models",
     "\\AppliMobile\\src\\pages",
     "\\AppliMobile\\src\\pages\\affichage-fiche-frais",
-    "\\AppliMobile\\src\\pages\\frais-forfaitise-non-forfaitise",
-    "\\AppliMobile\\src\\providers",
-    "\\AppliMobile\\src\\providers\\fichefrais"
+    "\\AppliMobile\\src\\pages\\frais-visiteur",
+    "\\AppliMobile\\src\\pages\\liste-visiteur",
+    "\\serveurAPI"
   ],
-  "SelectedNode": "\\AppliMobile\\src\\models\\Visiteur.ts",
+  "SelectedNode": "\\AppliMobile\\src\\pages\\liste-visiteur\\liste-visiteur.html",
   "PreviewInSolutionExplorer": false
 }

@@ -7,34 +7,59 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>liste-visiteur</ion-title>
+    <ion-title>Liste des utilisateurs</ion-title>
   </ion-navbar>
 
 </ion-header>
 
-<ion-content padding>
 
-  <ion-card round>
+<ion-content>
+  <div class="list" *ngFor="let visiteur of visiteur">
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          {{visiteur.id}} - {{visiteur.nom}}
+          <p>
+            <ion-grid>
+              <ion-row>
+                Prénom : {{visiteur.prenom}} | Login : {{visiteur.login}} | Mdp : {{visiteur.mdp}}
+              </ion-row>
+              <ion-row>
+                Groupe : {{visiteur.groupe}} | Adresse : {{visiteur.adresse}}
+              </ion-row>
+              <ion-row>
+                CP : {{visiteur.cp}} | Ville : {{visiteur.ville}}
+              </ion-row>
+              <ion-row>
+                Date Embauche : {{visiteur.dateEmbauche}}
+              </ion-row>
+            </ion-grid>
+          </p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
 
-    <ion-card-content padding>
-      <ion-card *ngFor="let visiteur of visiteur">
-        <div class="card-title">ID : {{visiteur.id}}</div>
-        <div class="card-text">Nom : {{visiteur.nom}}</div>
-        <div class="card-text">Prénom : {{visiteur.prenom}}</div>
-        <div class="card-text">Login : {{visiteur.login}}</div>
-        <div class="card-text">Mot de passe : {{visiteur.mdp}}</div>
-        <div class="card-text">Groupe : {{visiteur.groupe}}</div>
-        <div class="card-text">Adresse : {{visiteur.adresse}}</div>
-        <div class="card-text">Code postal : {{visiteur.cp}}</div>
-        <div class="card-text">Ville : {{visiteur.ville}}</div>
-        <div class="card-text">Date d'embauche : {{visiteur.dateEmbauche}}</div>
-      </ion-card>
-      <div>
-        <button ion-button color="light" block (click)="NavAjoutUser()">Ajouter un utilisateur</button>
-      </div>
-      <div>
-        <button ion-button color="danger" block (click)="Deconnexion()">Déconnexion</button>
-      </div>
-    </ion-card-content>
-    </ion-card>
-  </ion-content>
+  <div>
+    <button ion-button color="light" block (click)="NavAjoutUser()">Ajouter un utilisateur</button>
+  </div>
+  <div>
+    <button ion-button color="danger" block (click)="Deconnexion()">Déconnexion</button>
+  </div>
+
+</ion-content>
+
+<!--<ion-card-content padding>
+  <ion-card *ngFor="let visiteur of visiteur">
+    <div class="card-title">ID : {{visiteur.id}}</div>
+    <div class="card-text">Nom : {{visiteur.nom}}</div>
+    <div class="card-text">Prénom : {{visiteur.prenom}}</div>
+    <div class="card-text">Login : {{visiteur.login}}</div>
+    <div class="card-text">Mot de passe : {{visiteur.mdp}}</div>
+    <div class="card-text">Groupe : {{visiteur.groupe}}</div>
+    <div class="card-text">Adresse : {{visiteur.adresse}}</div>
+    <div class="card-text">Code postal : {{visiteur.cp}}</div>
+    <div class="card-text">Ville : {{visiteur.ville}}</div>
+    <div class="card-text">Date d'embauche : {{visiteur.dateEmbauche}}</div>
+  </ion-card>
+</ion-card-content>-->
