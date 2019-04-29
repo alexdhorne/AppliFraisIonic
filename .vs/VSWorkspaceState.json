@@ -1,16 +1,16 @@
 {
   "ExpandedNodes": [
     "",
-    "\\AppliMobile",
-    "\\AppliMobile\\src",
-    "\\AppliMobile\\src\\app",
-    "\\AppliMobile\\src\\models",
-    "\\AppliMobile\\src\\pages",
-    "\\AppliMobile\\src\\pages\\affichage-fiche-frais",
-    "\\AppliMobile\\src\\pages\\frais-visiteur",
-    "\\AppliMobile\\src\\pages\\liste-visiteur",
-    "\\serveurAPI"
+    "\\ApplicationFraisMobile",
+    "\\ApplicationFraisMobile\\src",
+    "\\ApplicationFraisMobile\\src\\app",
+    "\\ApplicationFraisMobile\\src\\models",
+    "\\ApplicationFraisMobile\\src\\pages",
+    "\\ApplicationFraisMobile\\src\\pages\\fiche-frais",
+    "\\ApplicationFraisMobile\\src\\pages\\fiche-frais-detail",
+    "\\ApplicationFraisMobile\\src\\pages\\settings",
+    "\\ApplicationFraisWeb"
   ],
-  "SelectedNode": "\\AppliMobile\\src\\pages\\liste-visiteur\\liste-visiteur.html",
+  "SelectedNode": "\\ApplicationFraisMobile\\src\\pages\\fiche-frais\\fiche-frais.ts",
   "PreviewInSolutionExplorer": false
 }
