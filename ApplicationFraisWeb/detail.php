@@ -32,35 +32,16 @@ $retour = [
 ];
 
 for ($i=0; $i < count($detailFraisForfait); $i++) {
-      $total = $total + ($detailFraisForfait[$i]['quantite'] * $detailFraisForfait[$i]['montant'])  ;
-   /*  $datas = array(
-            'id' => $detailFraisForfait[$i]['id'],
-            'quantite' => $detailFraisForfait[$i]['quantite'],
-            'etat' => $detailFraisForfait[$i]['etat_id'],
-            'montant' => $detailFraisForfait[$i]['montant'],
-
-		//'libelle' => $detailFraisForfait[$i]['libelle']
-      );
-
-      array_push($retour['detail_frais_forfait'], $datas);*/
-	  
+      $total = $total + ($detailFraisForfait[$i]['quantite'] * $detailFraisForfait[$i]['montant'])  ;	  
 }
 
-//$retour['detail_frais_forfait'] = $detailFraisForfait;
 
 for ($j=0; $j < count($detailFraisNonForfait); $j++) {
       $total = $total + $detailFraisNonForfait[$j]['montant'];
- /*     $datas = array(
-            'id' => $detailFraisNonForfait[$j]['id'],
-            'libelle' => $detailFraisNonForfait[$j]['libelle'],
-            'montant' => $detailFraisNonForfait[$j]['montant'],
-            'etat' => $detailFraisNonForfait[$j]['etat_id']
-      );
-
-      array_push($retour['detail_frais_non_forfait'], $datas);*/
 }
+
+
 $retour['detail_frais_non_forfait']=$detailFraisNonForfait;
 $retour['detail_frais_forfait'] = $detailFraisForfait;
 $retour['total'] = $total;
-//echo json_encode($retour);
 echo json_encode($retour, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PARTIAL_OUTPUT_ON_ERROR); 

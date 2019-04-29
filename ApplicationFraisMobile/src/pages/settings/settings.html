@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar color="blue">
+  <ion-navbar color="primary">
     <ion-title>Paramètres</ion-title>
   </ion-navbar>
 
@@ -10,24 +10,30 @@
 
   <form>
     <ion-list>
-        <ion-item>
-            Nom
-            <span item-end>{{nom}}</span>
-        </ion-item>
+      <ion-item>
+        Nom
+        <span item-end style="color:#3880ff;">{{nom}}</span>
+      </ion-item>
+      <ion-item>
+        Prénom
+        <span item-end style="color:#3880ff;">{{prenom}}</span>
+      </ion-item>
+      <ion-item>
+        Nom d'utilisateur
+        <span item-end style="color:#3880ff;">{{nomUtilisateur}}</span>
+      </ion-item>
+      <br />
 
-        <ion-item>
-            Prénom
-            <span item-end>{{prenom}}</span>
-        </ion-item>
-
-        <ion-item>
-            Nom d'utilisateur
-          <span item-end>{{nomUtilisateur}}</span>
-        </ion-item>
-
-        <ion-item text-center>
-            <button color="danger" ion-button clear (click)="deconnexion()">Déconnexion</button>
-        </ion-item>
+      
+      <ion-row>
+        <ion-col align-self-start>
+        </ion-col>
+        <ion-col align-self-center>
+          <button color="danger" ion-button (click)="deconnexion()">Déconnexion</button>
+        </ion-col>
+        <ion-col align-self-end>
+        </ion-col>
+      </ion-row>
     </ion-list>
   </form>
 

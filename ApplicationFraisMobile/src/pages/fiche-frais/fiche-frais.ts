@@ -22,13 +22,17 @@ export class FicheFraisPage {
   
   ficheFrais: Array<FicheFrais>;
   total: number;
-  nomUtilisateur: string;
+  nom: string;
+  prenom: string;
+
+
   
   constructor(public navCtrl: NavController, public userService: User, public navParams: NavParams, 
     public alertCtrl: AlertController, 
     public ficheFraisProvider: FicheFraisProvider) {
 
-    this.nomUtilisateur = userService.nomUtilisateur;
+    this.nom = userService.nom;
+    this.prenom = userService.prenom;
 
       ficheFraisProvider.getAll().subscribe((datas) =>{
         this.ficheFrais = datas['fiches_frais'] as Array<FicheFrais>;

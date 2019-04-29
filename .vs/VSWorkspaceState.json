@@ -2,7 +2,6 @@
   "ExpandedNodes": [
     "",
     "\\ApplicationFraisMobile",
-    "\\ApplicationFraisMobile\\src",
     "\\ApplicationFraisMobile\\src\\app",
     "\\ApplicationFraisMobile\\src\\models",
     "\\ApplicationFraisMobile\\src\\pages",
@@ -11,6 +10,6 @@
     "\\ApplicationFraisMobile\\src\\pages\\settings",
     "\\ApplicationFraisWeb"
   ],
-  "SelectedNode": "\\ApplicationFraisMobile\\src\\pages\\fiche-frais\\fiche-frais.ts",
+  "SelectedNode": "\\ApplicationFraisWeb",
   "PreviewInSolutionExplorer": false
 }
