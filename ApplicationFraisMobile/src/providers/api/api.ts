@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Api {
-  url: string = 'http://localhost/GSBApplicationFraisMobileIonic/ApplicationFraisWeb';
+  url: string = 'http://localhost/AppliFraisIonic/ApplicationFraisWeb';
 
   constructor(public http: HttpClient) {
   }

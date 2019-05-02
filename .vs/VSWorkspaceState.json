@@ -2,14 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\ApplicationFraisMobile",
-    "\\ApplicationFraisMobile\\src\\app",
+    "\\ApplicationFraisMobile\\src",
     "\\ApplicationFraisMobile\\src\\models",
     "\\ApplicationFraisMobile\\src\\pages",
-    "\\ApplicationFraisMobile\\src\\pages\\fiche-frais",
-    "\\ApplicationFraisMobile\\src\\pages\\fiche-frais-detail",
-    "\\ApplicationFraisMobile\\src\\pages\\settings",
+    "\\ApplicationFraisMobile\\src\\pages\\login",
+    "\\ApplicationFraisMobile\\src\\providers",
+    "\\ApplicationFraisMobile\\src\\providers\\api",
+    "\\ApplicationFraisMobile\\src\\providers\\user",
     "\\ApplicationFraisWeb"
   ],
-  "SelectedNode": "\\ApplicationFraisWeb",
+  "SelectedNode": "\\ApplicationFraisMobile\\src",
   "PreviewInSolutionExplorer": false
 }

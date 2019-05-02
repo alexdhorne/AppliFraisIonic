@@ -12,6 +12,7 @@ export class User {
   nom: string;
   prenom: string;
   nomUtilisateur: string;
+  role_id: number;
 
   constructor(public api: Api) { }
 
@@ -31,5 +32,6 @@ export class User {
     this.nom = null;
     this.prenom = null;
     this.nomUtilisateur = null;
+    this.role_id = null;
   }
 }

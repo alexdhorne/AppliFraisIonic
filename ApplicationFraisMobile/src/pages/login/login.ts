@@ -23,16 +23,26 @@ export class LoginPage {
       
   }
 
-  // Attempt to login in through our User service
   doLogin() {
     this.user.login(this.utilisateur).subscribe((resp) => {
-      if (resp['succes']) {
+      if (this.user.role_id = 1) {
         this.user.utilisateurId = resp['utilisateur_id'];
         this.user.nom = resp['nom'];
         this.user.prenom = resp['prenom'];
         this.user.nomUtilisateur = resp['nom_utilisateur'];
-        this.navCtrl.push('TabsPage');
-      }else{
+        this.user.role_id = resp['role_id'];
+        this.navCtrl.push('TabsPage');}
+        else if (this.user.role_id = 3) {
+          this.user.utilisateurId = resp['utilisateur_id'];
+          this.user.nom = resp['nom'];
+          this.user.prenom = resp['prenom'];
+          this.user.nomUtilisateur = resp['nom_utilisateur'];
+          this.user.role_id = resp['role_id'];
+          this.navCtrl.push('AdminPage');
+        
+      }
+    
+      else {
         let toast = this.toastCtrl.create({
           message: 'Identifiants incorrects',
           duration: 3000,
