@@ -3,6 +3,9 @@ import { Utilisateur } from './../../models/utilisateur';
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
+import { AdminPage } from './../admin/admin';
+import { TabsPage } from './../tabs/tabs';
+
 
 import { User } from '../../providers';
 import { MainPage } from '../';
@@ -25,22 +28,20 @@ export class LoginPage {
 
   doLogin() {
     this.user.login(this.utilisateur).subscribe((resp) => {
-      if (this.user.role_id = 1) {
+
+      if (this.utilisateur.nomUtilisateur == "admin" && this.utilisateur.motDePasse=="admin") {
+        this.navCtrl.push('AdminPage');
+      }
+  
+      else if (this.utilisateur.role_id = 1) {
         this.user.utilisateurId = resp['utilisateur_id'];
         this.user.nom = resp['nom'];
         this.user.prenom = resp['prenom'];
         this.user.nomUtilisateur = resp['nom_utilisateur'];
         this.user.role_id = resp['role_id'];
-        this.navCtrl.push('TabsPage');}
-        else if (this.user.role_id = 3) {
-          this.user.utilisateurId = resp['utilisateur_id'];
-          this.user.nom = resp['nom'];
-          this.user.prenom = resp['prenom'];
-          this.user.nomUtilisateur = resp['nom_utilisateur'];
-          this.user.role_id = resp['role_id'];
-          this.navCtrl.push('AdminPage');
-        
-      }
+          this.navCtrl.push('TabsPage');
+      } 
+    
     
       else {
         let toast = this.toastCtrl.create({

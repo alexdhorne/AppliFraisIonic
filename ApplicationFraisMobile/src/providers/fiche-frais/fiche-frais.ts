@@ -13,12 +13,16 @@ and Angular DI.
 @Injectable()
 export class FicheFraisProvider {
   
-  constructor(public api: Api, public userService: User) {
+  constructor(public api: Api, public userService: User, public http: HttpClient) {
     console.log('Hello FicheFraisProvider Provider');
   }
 
   getAll(){
     return this.api.get('fiche_frais.php?utilisateur=' + this.userService.utilisateurId);
+  }
+
+  getAllUser() {
+    return this.http.get('utilisateur.php');
   }
 
   
